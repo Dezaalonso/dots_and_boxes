@@ -5,37 +5,34 @@
 #include "Celdas.h"
 
 class Tablero {
-    private:
-        const int jugadores = 2;
-        vector<Jugador*> vecJugadores;
-        vector<char> nombres = {'A','B'};
-        int size;
-        vector<vector<char>> tablero;
-        Celdas celdas;
-        int* cajas;
+private:
+    const int jugadores = 2;
+    vector<Jugador*> vecJugadores;
+    vector<char> nombres = {'A','B'}; //PARA MARCAR LAS CAJAS CUANDO SE COMPLETAN LOS 4 LADOS
+    int size{};
+    vector<vector<char>> tablero;
+    Celdas celdas;
 
-    public:
-        Tablero() = default;
-        Tablero(int n);
+public:
+    Tablero() = default;
+    explicit Tablero(int n);
 
-        void puntos_de_jugadores(int& , int&, int&, int&);
-        bool verificar_posicion(int, int);
-        bool verificar_lado_valido(int, int, int, int);
-        bool marcar_lado_vacio(int, int, int, int);
-        void imprimir_tablero();
-        void setJugador(Jugador* );
-        bool comprueba_lleno();
-        bool verificar_columnas_llenas(int, int);
-        bool verificar_filas_llenas(int, int);
-        void set_side(int, int, int, int);
-        bool cajas_vecinas(int, int, int, int, int);
-        void limpiar_casillas();
+    void imprimir_tablero();//
+    void setJugador(Jugador* );
+    bool comprueba_lleno();//
+    bool verificar_columnas_vacias(int, int);//
+    bool verificar_filas_vacias(int, int);//
+    void vertical_o_horizontal(int, int, int, int);//
+    bool cajas_vecinas(int, int, int, int, int);//
+    void iniciar_casillas();//
+    void ordena_coordenadas(int& , int&, int&, int&);//
+    bool verificar_posicion(int, int);//
+    bool verificar_lado_valido(int, int, int, int);//
+    bool marcar_lado_vacio(int, int, int, int);//
 
-        int getNroJugadores();
-        int* getCajas();
-        vector<Jugador *> getVecJugadores();
-
-        ~Tablero();
+    int getNroJugadores() const;//
+    vector<Jugador *> getVecJugadores();
+    ~Tablero() = default;
 };
 
 

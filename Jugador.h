@@ -6,14 +6,21 @@
 using namespace std;
 
 class Jugador {
-    private:
-        string nombre;
-    public:
-        Jugador() = default;
-        Jugador(string nombre);
-        string getNombre();
+private:
+    string nombre;
+    int puntos = 0;
+public:
+    Jugador() = default;
+    explicit Jugador(string nombre){
+        this->nombre = nombre;
+    }
+    string getNombre() {
+        return nombre;
+    }
+    void sumarPunto(){ puntos++; }
+    int getPuntos() { return puntos; }
 
-        ~Jugador() = default;
+    ~Jugador() = default;
 };
 
 
