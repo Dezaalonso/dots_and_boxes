@@ -14,3 +14,4 @@ Las instrucciones de juego son las siguientes: Cada jugador tiene un turno para 
 ![UML_Proyecto](https://user-images.githubusercontent.com/86765570/204686620-092fbe06-7d05-471d-bf73-8a1bd1a52ab8.png)
 
 # Link de video
+https://youtu.be/-ST80-U1Ejk
